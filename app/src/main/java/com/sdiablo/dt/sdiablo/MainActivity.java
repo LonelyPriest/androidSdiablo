@@ -13,7 +13,7 @@ import android.webkit.WebViewClient;
 
 public class MainActivity extends AppCompatActivity {
 
-    WebView mWebview;
+    WebView mWebView;
     WebSettings mWebSettings;
     SwipeRefreshLayout mSwipeRefresh;
 
@@ -22,12 +22,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mWebview = (WebView) findViewById(R.id.sDiabloWebview);;
+        mWebView = (WebView) findViewById(R.id.sDiabloWebview);;
 
-        mWebview.clearCache(true);
-        mWebview.clearHistory();
+        mWebView.clearCache(true);
+        mWebView.clearHistory();
 
-        mWebSettings = mWebview.getSettings();
+        mWebSettings = mWebView.getSettings();
         mWebSettings.setJavaScriptEnabled(true);
 
         mWebSettings.setSaveFormData(false);
@@ -40,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
         mWebSettings.setDefaultTextEncodingName("utf-8");
         mWebSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
 
-        mWebview.loadUrl("http://120.24.39.174");
+        mWebView.loadUrl("http://120.24.39.174");
 
-        mWebview.setWebViewClient(new WebViewClient() {
+        mWebView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mWebview.setWebChromeClient(new WebChromeClient() {
+        mWebView.setWebChromeClient(new WebChromeClient() {
             @Override
             public void onReceivedTitle(WebView view, String title) {
 
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mWebview.setWebViewClient(new WebViewClient() {
+        mWebView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
 
@@ -79,15 +79,15 @@ public class MainActivity extends AppCompatActivity {
         mSwipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                mWebview.reload();
+                mWebView.reload();
             }
         });
     }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK && mWebview.canGoBack()) {
-            // mWebview.goBack();
+        if (keyCode == KeyEvent.KEYCODE_BACK && mWebView.canGoBack()) {
+            // mWebView.goBack();
             return true;
         }
 
@@ -96,13 +96,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        if (mWebview != null) {
-            mWebview.loadDataWithBaseURL(null, "", "text/html", "utf-8", null);
-            mWebview.clearHistory();
+        if (mWebView != null) {
+            mWebView.loadDataWithBaseURL(null, "", "text/html", "utf-8", null);
+            mWebView.clearHistory();
 
-            ((ViewGroup) mWebview.getParent()).removeView(mWebview);
-            mWebview.destroy();
-            mWebview = null;
+            ((ViewGroup) mWebView.getParent()).removeView(mWebView);
+            mWebView.destroy();
+            mWebView = null;
         }
         super.onDestroy();
     }
