@@ -1,0 +1,918 @@
+/*
+ * Cikonss v1.0
+ *
+ * URL: https://github.com/zzap/Cikonss
+ * License: MIT License
+ *
+ */
+
+/* Generals */
+.cicon {
+	/* don't change width and height in order to change the size of the icon,
+	you can control the size with font-size for different class(es) - below */
+	line-height: 100%;
+	width: 1em;
+	height: 1em;
+	position: relative;
+	display: block;
+	float: left;
+}
+/* Button like icons */
+.cicon-square,
+.cicon-rounded {
+	border: .75em solid rgb(242, 242, 242); /* #f2f2f2 */
+	background-color: rgb(242, 242, 242); /* #f2f2f2 */
+	margin: 0 .5em .5em 0;
+	/* for browsers that supports */
+	-webkit-box-shadow: 0 0 0 .0625em rgb(226, 226, 226); /* #e2e2e2 */
+	-moz-box-shadow: 0 0 0 .0625em rgb(226, 226, 226); /* #e2e2e2 */
+	box-shadow: 0 0 0 .0625em rgb(226, 226, 226); /* #e2e2e2 */
+}
+.cicon-rounded {
+	border-radius: 1.5em;
+}
+/*
+ * Sizes
+ *
+ * 5 preset sizes, simply change the font-size or add your custom class.
+ *
+ */
+.cicon-small {
+	font-size: 1em;
+}
+.cicon-mid {
+	font-size: 2em;
+}
+.cicon-large {
+	font-size: 4em;
+}
+.cicon-extra-large {
+	font-size: 8em;
+}
+.cicon-huge {
+	font-size: 12em;
+}
+
+/*
+ * Icons
+ *
+ * Icons are somewhat grouped so that you can easily pick the ones you like
+ * if the whole file is too large for your project.
+ *
+ */
+
+/* Home */
+.cicon-home {
+	position: absolute;
+	top: 0;
+	left: .125em;
+	width: .25em;
+	height: .5em;
+	background-color: rgb(102, 102, 102); /* #666 */
+}
+.cicon-home:before,
+.cicon-home:after {
+	content: "";
+	position: absolute;
+	border-style: solid;
+}
+.cicon-home:before {
+	top: .5em;
+	left: 0;
+	width: .25em;
+	height: .3125em;
+	border-width: .1875em .25em 0 .25em;
+	border-color: rgb(102, 102, 102); /* #666 */
+}
+.cicon-home:after {
+	top: -.5em;
+	left: -.125em;
+	width: 0;
+	height: 0;
+	border-width: .5em;
+	border-color: transparent transparent rgb(102, 102, 102) transparent; /* #666 */
+}
+
+/* Arrows */
+.cicon-arrowRight,
+.cicon-arrowLeft,
+.cicon-arrowDown,
+.cicon-arrowUp {
+	position: absolute;
+	width: .5em;
+	height: .5em;
+	background-color: rgb(102, 102, 102); /* #666 */
+}
+.cicon-arrowRight:after,
+.cicon-arrowLeft:after,
+.cicon-arrowDown:after,
+.cicon-arrowUp:after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-width: .5em;
+	border-style: solid;
+}
+/* Arrows - Left and Right */
+.cicon-arrowRight,
+.cicon-arrowLeft {
+	top: .25em;
+}
+.cicon-arrowRight {
+	left: 0;
+}
+.cicon-arrowLeft {
+	right: 0;
+}
+.cicon-arrowRight:after,
+.cicon-arrowLeft:after {
+	top: -.25em;
+}
+.cicon-arrowRight:after {
+	left: .5em;
+	border-color: transparent transparent transparent rgb(102, 102, 102); /* #666 */
+}
+.cicon-arrowLeft:after {
+	right: .5em;
+	border-color: transparent rgb(102, 102, 102) transparent transparent; /* #666 */
+}
+/* Arrows -  Down and Up */
+.cicon-arrowDown,
+.cicon-arrowUp {
+	left: .25em;
+}
+.cicon-arrowDown {
+	top: 0;
+}
+.cicon-arrowUp,
+.cicon-arrowDown:after {
+	top: .5em;
+}
+.cicon-arrowDown:after,
+.cicon-arrowUp:after {
+	left: -.25em;
+}
+.cicon-arrowDown:after {
+	border-color: rgb(102, 102, 102) transparent transparent transparent; /* #666 */
+}
+.cicon-arrowUp:after {
+	top: -1em;
+	border-color: transparent transparent rgb(102, 102, 102) transparent; /* #666 */
+}
+
+/* Comments */
+.cicon-comment,
+.cicon-comment-text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1em;
+	height: .75em;
+	background-color: rgb(102, 102, 102); /* #666 */
+	/* for browsers that supports */
+	border-radius: .125em;
+}
+.cicon-comment:after,
+.cicon-comment-text:before,
+.cicon-comment-text:after {
+	content: "";
+	position: absolute;
+	border-style: solid;
+}
+.cicon-comment-text:before {
+	top: .1875em;
+	left: .125em;
+	width: .75em;
+	height: .125em;
+	border-width: .09375em 0;
+	border-color: rgb(249, 249, 249); /* #f9f9f9 */
+}
+.cicon-comment:after,
+.cicon-comment-text:after {
+	top: .75em;
+	left: .25em;
+	width: 0;
+	height: 0;
+	border-width: .125em;
+	border-color: rgb(102, 102, 102) transparent transparent rgb(102, 102, 102); /* #666 */
+}
+
+/* Mail */
+.cicon-mail {
+	position: absolute;
+	top: .15625em;
+	left: 0;
+	width: 1em;
+	height: .75em;
+	background-color: rgb(102, 102, 102); /*#666*/
+}
+.cicon-mail:before,
+.cicon-mail:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-width: .4em .5em;
+	border-style: solid;
+}
+.cicon-mail:before {
+	top: 0;
+	border-color: rgb(249, 249, 249) transparent transparent transparent; /* #f9f9f9 */
+}
+.cicon-mail:after {
+	top: -.0625em;
+	border-color: rgb(102, 102, 102) transparent transparent transparent; /* #666 */
+}
+
+/* Calendar */
+.cicon-calendar{
+	position: absolute;
+	top: .125em;
+	left: 0;
+	width: .875em;
+	height: .6875em;
+	border-width: .125em .0625em .0625em .0625em;
+	border-style: solid;
+	border-color: rgb(102, 102, 102); /* #666 */
+	background-color: rgb(249, 249, 249); /* #f9f9f9 */
+	/* for browsers that supports */
+	border-radius: .0625em;
+}
+.cicon-calendar:before{
+	content: "";
+	position: absolute;
+	top: -.25em;
+	left: .125em;
+	width: .375em;
+	height: .125em;
+	border-width: 0 .125em;
+	border-style: solid;
+	border-color: rgb(102, 102, 102); /* #666 */
+}
+.cicon-calendar:after{
+	content: "15";
+	position: absolute;
+	top: -.25em;
+	left: .25em;
+	font-family: Arial, sans-serif;
+	font-size: .5em;
+	font-weight: bold;
+	color: rgb(102, 102, 102); /* #666 */
+}
+
+/* Plus */
+.cicon-plus,
+.cicon-plus:after {
+	position: absolute;
+	width: .375em;
+	height: .375em;
+	border-style: solid;
+	border-color: rgb(102, 102, 102); /* #666 */
+}
+.cicon-plus {
+	top: 0;
+	left: 0;
+	border-width: 0 .25em .25em 0;
+}
+.cicon-plus:after {
+	content: "";
+	top: .375em;
+	left: .375em;
+	border-width: .25em 0 0 .25em;
+}
+
+/* Minus */
+.cicon-minus {
+	position: absolute;
+	top: .375em;
+	left: 0;
+	width: 1em;
+	height: .25em;
+	background-color: rgb(102, 102, 102); /* #666 */
+}
+
+/* File */
+.cicon-file {
+	position: absolute;
+	top: 0;
+	left: .125em;
+	width: .5em;
+	height: .75em;
+	border-width: .125em;
+	border-style: solid;
+	border-color: rgb(102, 102, 102); /* #666 */
+	background-color: rgb(249, 249, 249); /* #f9f9f9 */
+	/* for browsers that supports */
+	border-radius: .0625em;
+}
+.cicon-file:before {
+	content: "";
+	position: absolute;
+	top: -.125em;
+	left: -.125em;
+	width: 0;
+	height: 0;
+	border-width: .15625em;
+	border-style: solid;
+	border-color: rgb(255, 255, 255) rgb(102, 102, 102) rgb(102, 102, 102) rgb(255, 255, 255); /* #fff and #666 - #fff has to mach body bg*/
+}
+.cicon-square .cicon-file:before,
+.cicon-rounded .cicon-file:before {
+	border-color: rgb(242, 242, 242) rgb(102, 102, 102) rgb(102, 102, 102) rgb(242, 242, 242); /* #f2f2f2 and #666 - #f2f2f2 has to mach with .cicon-square and .cicon-rounded bg*/
+}
+
+/* Folder */
+.cicon-folder {
+	position: absolute;
+	top: .125em;
+	left: 0;
+	width: 1em;
+	height: .875em;
+	background-color: rgb(102, 102, 102); /* #666 */
+	/* for browsers that supports */
+	border-bottom-left-radius: .0625em;
+	border-bottom-right-radius: .0625em;
+}
+.cicon-folder:before {
+	content: "";
+	position: absolute;
+	top: -.125em;
+	left: .125em;
+	width: .375em;
+	height: .125em;
+	background-color: rgb(102, 102, 102); /* #666 */
+	/* for browsers that supports */
+	border-top-left-radius: .0625em;
+	border-top-right-radius: .0625em;
+}
+
+/* Tag */
+.cicon-tag {
+	position: absolute;
+	top: 0;
+	left: .25em;
+	width: .5em;
+	height: .75em;
+	background-color: rgb(102, 102, 102); /* #666 */
+	/* for browsers that supports */
+	border-top-left-radius: .0625em;
+	border-top-right-radius: .0625em;
+}
+.cicon-tag:before,
+.cicon-tag:after {
+	content: "";
+	position: absolute;
+	top: .75em;
+	width: 0;
+	height: 0;
+	border-width: .125em;
+	border-style: solid;
+}
+.cicon-tag:before {
+	left: 0;
+	border-color: rgb(102, 102, 102) transparent transparent rgb(102, 102, 102); /* #666 */
+}
+.cicon-tag:after {
+	left: .25em;
+	border-color: rgb(102, 102, 102) rgb(102, 102, 102) transparent transparent; /* #666 */
+}
+
+/* Desktop */
+.cicon-desktop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: .875em;
+	height: .625em;
+	border-width: .0625em;
+	border-style: solid;
+	border-color: rgb(102, 102, 102); /* #666 */
+	background-color: rgb(249, 249, 249); /* #f9f9f9 */
+	/* for browsers that supports */
+	border-radius: .0625em;
+}
+.cicon-desktop:before,
+.cicon-desktop:after {
+	content: "";
+	position: absolute;
+	background-color: rgb(102, 102, 102); /* #666 */
+}
+.cicon-desktop:before {
+	top: .6875em;
+	left: .3125em;
+	width: .25em;
+	height: .1875em;
+}
+.cicon-desktop:after {
+	top: .875em;
+	left: .125em;
+	width: .625em;
+	height: .0625em;
+}
+
+/* Tablet */
+.cicon-tablet {
+	position: absolute;
+	top: .0625em;
+	left: 0;
+	width: .75em;
+	height: .625em;
+	border-width: .125em;
+	border-style: solid;
+	border-color: rgb(102, 102, 102); /* #666 */
+	background-color: rgb(249, 249, 249); /* #f9f9f9 */
+	/* for browsers that supports */
+	border-radius: .0625em;
+}
+.cicon-tablet:before {
+	content: "";
+	position: absolute;
+	top: .28125em;
+	left: -.09375em;
+	width: .0625em;
+	height: .0625em;
+	background-color: rgb(255, 255, 255); /* #fff */
+	/* for browsers that supports */
+	border-radius: .0625em;
+}
+
+/* Phone */
+.cicon-phone {
+	position: absolute;
+	top: 0;
+	left: .1875em;
+	width: .5em;
+	height: .75em;
+	border-width: .125em .0625em;
+	border-style: solid;
+	border-color: rgb(102, 102, 102); /* #666 */
+	background-color: rgb(249, 249, 249); /* #f9f9f9 */
+	/* for browsers that supports */
+	border-radius: .0625em;
+}
+.cicon-phone:after {
+	content: "";
+	position: absolute;
+	top: .78125em;
+	left: .21875em;
+	width: .0625em;
+	height: .0625em;
+	background-color: rgb(255, 255, 255); /* #fff */
+	/* for browsers that supports */
+	border-radius: .0625em;
+}
+
+/* Menu */
+.cicon-menu,
+.cicon-menu:before,
+.cicon-menu:after {
+	position: absolute;
+	left: 0;
+	width: 1em;
+	height: .25em;
+	background-color: rgb(102, 102, 102); /* #666 */
+}
+.cicon-menu {
+	top: .0625em;
+}
+.cicon-menu:before {
+	content: "";
+	top: .3125em;
+}
+.cicon-menu:after {
+	content: "";
+	top: .625em;
+}
+
+/* Download  and Upload */
+.cicon-download,
+.cicon-upload {
+	position: absolute;
+	left: .375em;
+	width: .25em;
+	height: .5em;
+	background-color: rgb(102, 102, 102); /* #666 */
+}
+.cicon-download {
+	top: 0;
+}
+.cicon-upload {
+	top: .25em;
+}
+.cicon-download:before,
+.cicon-upload:before {
+	content: "";
+	position: absolute;
+	left: -.125em;
+	width: 0;
+	height: 0;
+	border-width: .25em;
+	border-style: solid;
+}
+.cicon-download:before {
+	top: .5em;
+	border-color: rgb(102, 102, 102) transparent transparent transparent; /* #666 */
+}
+.cicon-upload:before {
+	top: -.5em;
+	border-color: transparent transparent rgb(102, 102, 102) transparent; /* #666 */
+}
+.cicon-download:after,
+.cicon-upload:after {
+	content: "";
+	position: absolute;
+	left: -.375em;
+	width: .75em;
+	height: .125em;
+	border-width: 0 .125em .125em .125em;
+	border-style: solid;
+	border-color: rgb(102, 102, 102); /* #666 */
+}
+.cicon-download:after {
+	top: .75em;
+}
+.cicon-upload:after {
+	top: .5em;
+}
+
+/* Page Templates */
+.cicon-tpl-full,
+.cicon-tpl-side-r,
+.cicon-tpl-side-l {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1em;
+	height: .25em;
+	background-color: rgb(102, 102, 102);
+}
+.cicon-tpl-full:after,
+.cicon-tpl-side-r:before,
+.cicon-tpl-side-r:after,
+.cicon-tpl-side-l:before,
+.cicon-tpl-side-l:after {
+	content: "";
+	position: absolute;
+	top: .3125em;
+	height: .6875em;
+	background-color: rgb(102, 102, 102);
+}
+.cicon-tpl-full:after,
+.cicon-tpl-side-r:before,
+.cicon-tpl-side-l:before {
+	left: 0;
+}
+.cicon-tpl-full:after {
+	width: 1em;
+}
+.cicon-tpl-side-r:before,
+.cicon-tpl-side-l:after {
+	width: .6875em;
+}
+.cicon-tpl-side-r:after,
+.cicon-tpl-side-l:before {
+	width: .25em;
+}
+.cicon-tpl-side-r:after {
+	left: .75em;
+}
+.cicon-tpl-side-l:after {
+	left: .3125em;
+}
+
+/* Views */
+/* List view */
+.cicon-list-view,
+.cicon-list-view:before,
+.cicon-list-view:after {
+	position: absolute;
+	width: .0625em;
+	height: .25em;
+	border-width: 0 .6875em 0 .25em;
+	border-style: solid;
+	border-color: rgb(102, 102, 102);
+}
+.cicon-list-view {
+	top: .0625em;
+	left: 0;
+}
+.cicon-list-view:before,
+.cicon-list-view:after {
+	content: "";
+	left: -.25em;
+}
+.cicon-list-view:before {
+	top: .3125em;
+}
+.cicon-list-view:after {
+	top: .625em;
+}
+/* Grid view */
+.cicon-grid-view,
+.cicon-grid-view:before {
+	position: absolute;
+	width: .0625em;
+	height: .46875em;
+	border-width: 0 .46875em;
+	border-style: solid;
+	border-color: rgb(102, 102, 102);
+}
+.cicon-grid-view {
+	top: 0;
+	left: 0;
+}
+.cicon-grid-view:before {
+	content: "";
+	top: .53125em;
+	left: -.46875em;
+}
+
+/* Camera */
+.cicon-camera {
+	position: absolute;
+	top: .25em;
+	left: 0;
+	width: .75em;
+	height: .5em;
+	background-color: rgb(102, 102, 102); /* #666 */
+}
+.cicon-camera:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: .5em;
+	width: 0;
+	height: 0;
+	border-width: .25em;
+	border-style: solid;
+	border-color: transparent rgb(102, 102, 102) transparent transparent; /* #666 */
+}
+
+/* Image */
+.cicon-image {
+	position: absolute;
+	top: .125em;
+	left: 0;
+	width: .875em;
+	height: .625em;
+	border-width: .0625em;
+	border-style: solid;
+	border-color: rgb(102, 102, 102); /* #666 */
+	/* for browsers that supports */
+	border-radius: .0625em;
+}
+.cicon-image:before,
+.cicon-image:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-color: transparent transparent rgb(102, 102, 102) transparent; /* #666 */
+}
+.cicon-image:before {
+	left: 0;
+	border-width: .25em .25em .125em .125em;
+}
+.cicon-image:after {
+	right: 0;
+	border-width: .25em .25em .375em .375em;
+}
+
+/* Player controls */
+/* Play */
+.cicon-play {
+	position: absolute;
+	top: 0;
+	left: .1875em;
+	width: 0;
+	height: 0;
+	border-width: .5em .625em;
+	border-style: solid;
+	border-color: transparent transparent transparent rgb(102, 102, 102); /* #666 */
+}
+/* Stop */
+.cicon-stop {
+	position: absolute;
+	top: .0625em;
+	left: .0625em;
+	width: .875em;
+	height: .875em;
+	background-color: rgb(102, 102, 102); /* #666 */
+}
+/* Pause */
+.cicon-pause,
+.cicon-pause:after {
+	position: absolute;
+	width: .25em;
+	height: .875em;
+	background-color: rgb(102, 102, 102); /* #666 */
+}
+.cicon-pause {
+	top: .0625em;
+	left: .21875em;
+}
+.cicon-pause:after {
+	content: "";
+	top: 0;
+	left: .3125em;
+}
+/* Forward, Next, Rewind and Prev */
+.cicon-forward,
+.cicon-next,
+.cicon-rewind,
+.cicon-prev,
+.cicon-forward:after,
+.cicon-next:before,
+.cicon-rewind:after,
+.cicon-prev:before {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-width: .4375em;
+	border-style: solid;
+}
+.cicon-forward,
+.cicon-next,
+.cicon-rewind,
+.cicon-prev {
+	top: .0625em;
+}
+.cicon-forward:after,
+.cicon-next:before,
+.cicon-rewind:after,
+.cicon-prev:before,
+.cicon-next:after,
+.cicon-prev:after {
+	content: "";
+	top: -.4375em;
+}
+.cicon-forward,
+.cicon-next,
+.cicon-forward:after,
+.cicon-next:before {
+	border-color: transparent transparent transparent rgb(102, 102, 102); /* #666 */
+}
+.cicon-rewind,
+.cicon-prev,
+.cicon-rewind:after,
+.cicon-prev:before {
+	border-color: transparent rgb(102, 102, 102) transparent transparent; /* #666 */
+}
+.cicon-forward {
+	left: .0625em;
+}
+.cicon-rewind {
+	right: .0625em;
+}
+.cicon-next,
+.cicon-forward:after,
+.cicon-next:before {
+	left: 0;
+}
+.cicon-prev,
+.cicon-rewind:after,
+.cicon-prev:before {
+	right: 0;
+}
+.cicon-next:after,
+.cicon-prev:after {
+	position: absolute;
+	width: .125em;
+	height: .875em;
+	background-color: rgb(102, 102, 102); /* #666 */
+}
+.cicon-next:after {
+	left: .4375em;
+}
+.cicon-prev:after {
+	right: .4375em;
+}
+
+/* Stats */
+.cicon-stats,
+.cicon-stats:before {
+	position: absolute;
+	width: .3125em;
+	border-width: 0 .1875em;
+	border-style: solid;
+	border-color: rgb(102, 102, 102); /* #666 */
+}
+.cicon-stats {
+	top: 0;
+	left: 0;
+	height: .875em;
+}
+.cicon-stats:before {
+	content: "";
+	top: .3125em;
+	left: .0625em;
+	height: .5625em;
+}
+.cicon-stats:after {
+	content: "";
+	position: absolute;
+	top: .875em;
+	left: -.1875em;
+	width: 1em;
+	height: .125em;
+	background-color: rgb(102, 102, 102); /* #666 */
+}
+
+/* Battery */
+.cicon-battery-empty,
+.cicon-battery-1_4,
+.cicon-battery-half,
+.cicon-battery-3_4,
+.cicon-battery-full {
+	position: absolute;
+	top: .25em;
+	left: 0;
+	width: .75em;
+	height: .375em;
+	border-width: .0625em;
+	border-style: solid;
+	border-color: rgb(102, 102, 102); /* #666 */
+	background-color: rgb(249, 249, 249); /* #f9f9f9 */
+}
+.cicon-battery-empty:after,
+.cicon-battery-1_4:after,
+.cicon-battery-half:after,
+.cicon-battery-3_4:after,
+.cicon-battery-full:after {
+	content: "";
+	position: absolute;
+	top: .0625em;
+	left: .8125em;
+	width: .125em;
+	height: .25em;
+	background-color: rgb(102, 102, 102); /* #666 */
+}
+.cicon-battery-1_4:before,
+.cicon-battery-half:before,
+.cicon-battery-3_4:before,
+.cicon-battery-full:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: .375em;
+	background-color: rgb(153, 153, 153); /* #999 */
+}
+.cicon-battery-1_4:before {
+	width: .1875em;
+}
+.cicon-battery-half:before {
+	width: .375em;
+}
+.cicon-battery-3_4:before {
+	width: .5625em;
+}
+.cicon-battery-full:before {
+	width: .75em;
+}
+
+/* Sound */
+.cicon-sound-mute,
+.cicon-sound-normal,
+.cicon-sound-loud {
+	position: absolute;
+	top: .375em;
+	left: .09375em;
+	width: .25em;
+	height: .25em;
+	background-color: rgb(102, 102, 102);
+}
+.cicon-sound-mute:before,
+.cicon-sound-normal:before,
+.cicon-sound-loud:before {
+	content: "";
+	position: absolute;
+	top: -.3125em;
+	left: -.3125em;
+	width: .375em;
+	height: .375em;
+	border-width: .25em;
+	border-style: solid;
+	border-color: transparent rgb(102, 102, 102) transparent transparent;
+}
+.cicon-sound-normal:after,
+.cicon-sound-loud:after {
+	content: "";
+	position: absolute;
+	top: -.125em;
+	left: .625em;
+	width: .0625em;
+	height: .53125em;
+	border-style: solid;
+	border-color: rgb(102, 102, 102);
+}
+.cicon-sound-normal:after {
+	border-width: 0 0 0 .0625em;
+}
+.cicon-sound-loud:after {
+	border-width: 0 .0625em;
+}
