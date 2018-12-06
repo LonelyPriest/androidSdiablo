@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         mWebSettings.setDefaultTextEncodingName("utf-8");
         mWebSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
 
-        mWebView.loadUrl("http://120.24.39.174");
+        mWebView.loadUrl("https://qzgui.com");
 
         mWebView.setWebViewClient(new WebViewClient() {
             @Override
