@@ -1,4 +1,4 @@
-package com.sdiablo.dt.sdiablo;
+package com.sdiablo.dt.sdiablo.activity;
 
 import android.graphics.Bitmap;
 import android.net.http.SslError;
@@ -16,6 +16,8 @@ import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import com.sdiablo.dt.sdiablo.R;
 
 import java.io.IOException;
 
