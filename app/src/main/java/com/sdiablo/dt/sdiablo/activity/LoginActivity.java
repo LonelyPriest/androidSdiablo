@@ -11,7 +11,6 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Spinner;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -43,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
     BootstrapButton mBtnLogin;
     TextInputLayout mLoginWrap;
     TextInputLayout mPasswordWrap;
-    Spinner mViewServer;
+    // Spinner mViewServer;
     Context mContext;
 
     String mName;
@@ -68,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
                         Integer code = body.getCode();
                         switch (code) {
                             case 0:
-                                startLogin(user, body.getToken());
+                                startLogin(user, body.getToken(), body.getPath());
                                 break;
                             default:
                                 loginError(code);
@@ -103,7 +102,7 @@ public class LoginActivity extends AppCompatActivity {
 
         mLoginWrap = (TextInputLayout) findViewById(R.id.login_name_holder);
         mPasswordWrap = (TextInputLayout) findViewById(R.id.login_password_holder);
-        mViewServer = (Spinner)findViewById(R.id.spinner_select_server);
+        // mViewServer = (Spinner)findViewById(R.id.spinner_select_server);
 
         final DiabloUser user = DiabloDBManager.instance().getFirstLoginUser();
         if (null != user) {
@@ -150,7 +149,7 @@ public class LoginActivity extends AppCompatActivity {
                             Integer code = body.getCode();
                             switch (code){
                                 case 0:
-                                    startLogin(user, body.getToken());
+                                    startLogin(user, body.getToken(), body.getPath());
                                     break;
                                 case 1105:
                                     loginError(1105, createLoginListener(user));
@@ -188,8 +187,9 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void startLogin(DiabloUser user, String token) {
+    private void startLogin(DiabloUser user, String token, String startPath) {
         DiabloProfile.instance().setToken(token);
+        DiabloProfile.instance().setStartPath(startPath);
         if (null == user) {
             DiabloDBManager.instance().addUser(mName, mPassword);
         }
@@ -205,6 +205,10 @@ public class LoginActivity extends AppCompatActivity {
 
         mLoadingDialog = DiabloUtils.createLoadingDialog(mContext);
         mLoadingDialog.show();
+
+        Message message = Message.obtain(mLoginHandler);
+        message.what = 10;
+        message.sendToTarget();
     }
 
     public void gotoMain(){

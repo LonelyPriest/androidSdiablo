@@ -15,6 +15,7 @@ public class DiabloProfile {
     private static DiabloProfile mProfile;
 
     private String mToken;
+    private  String mStartPath;
     // server
     private String mServer;
     // resource handler
@@ -36,6 +37,10 @@ public class DiabloProfile {
         return this.mToken;
     }
 
+    public String getStartPath() {
+        return this.mStartPath;
+    }
+
     public void setServer(final String server) {
         this.mServer = server;
     }
@@ -51,6 +56,9 @@ public class DiabloProfile {
         return mResource;
     }
 
+    public void setStartPath(String path) {
+        mStartPath = path;
+    }
     public void setToken(String token){
         mToken = DiabloProfile.mSessionId + "=" + token;
     }

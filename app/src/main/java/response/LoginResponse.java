@@ -9,6 +9,8 @@ import com.google.gson.annotations.SerializedName;
 public class LoginResponse extends Response {
     @SerializedName("token")
     private String token;
+    @SerializedName("path")
+    private String path;
 
     LoginResponse(){
         super();
@@ -16,6 +18,10 @@ public class LoginResponse extends Response {
 
     public String getToken() {
         return this.token;
+    }
+
+    public String getPath() {
+        return this.path;
     }
 
     public void setToken(String mToken) {

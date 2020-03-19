@@ -22,6 +22,7 @@ import com.sdiablo.dt.sdiablo.R;
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
+    private final static String LOG_TAG = "MainActivity:";
 
     WebView mWebView;
     WebSettings mWebSettings;
@@ -50,12 +51,22 @@ public class MainActivity extends AppCompatActivity {
         mWebSettings.setDefaultTextEncodingName("utf-8");
         mWebSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
 
-        mWebView.loadUrl("https://120.24.39.174");
+//        Map<String, String> additionalHttpHeaders = new HashMap<>();
+//        additionalHttpHeaders.put("cookie", DiabloProfile.instance().getToken());
+//        Log.d(LOG_TAG, getString(R.string.diablo_production_server) + DiabloProfile.instance().getStartPath());
+//        mWebView.loadUrl(getString(R.string.diablo_production_server) + DiabloProfile.instance().getStartPath(),
+//            additionalHttpHeaders);
+
+        mWebView.loadUrl(getString(R.string.diablo_production_server));
 
         mWebView.setWebViewClient(new WebViewClient() {
             @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
+            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    view.loadUrl(request.getUrl().toString());
+                } else {
+                    view.loadUrl(request.toString());
+                }
                 return true;
             }
 

@@ -63,17 +63,17 @@
     </android.support.design.widget.TextInputLayout>
   </LinearLayout>
 
-  <LinearLayout android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5sp"
-                android:layout_marginEnd="5sp">
-    <Spinner
-        android:id="@+id/spinner_select_server"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        style="@style/Widget.AppCompat.Spinner.Underlined"
-        android:text="@string/login"/>
-  </LinearLayout>
+  <!--<LinearLayout android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="5sp"-->
+                <!--android:layout_marginEnd="5sp">-->
+    <!--<Spinner-->
+        <!--android:id="@+id/spinner_select_server"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_width="match_parent"-->
+        <!--style="@style/Widget.AppCompat.Spinner.Underlined"-->
+        <!--android:text="@string/login"/>-->
+  <!--</LinearLayout>-->
 
   <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"

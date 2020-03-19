@@ -9,7 +9,7 @@
     <string name="logout">注销</string>
     <string name="login_clear">清除</string>
 
-    <string name="diablo_production_server">http://120.24.39.174/</string>
+    <string name="diablo_production_server">https://qzgui.com</string>
 
     <string name="invalid_name_password">用户名或密码错误</string>
     <string name="login_user_active">该用户已登录系统，是否继续登录？</string>
